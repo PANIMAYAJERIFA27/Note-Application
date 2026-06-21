@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<title>Daily Memories</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="theme">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+<div>
+<div class="logo items-center flex gap-5 text-2xl font-bold ">
+   <i class="fa-solid fa-book-open  text-[#3b82f6] "></i>
+   <span class="logo-title text-[#3b82f6]" >Daily Memories</span>
+</div>
+
+<div class="menu ">
+
+      <button   id="allBtn" class="btn active w-55 text-left" >
+    <i class="fa-solid fa-house"></i>
+    <span>All Notes</span>
+    </button>
+
+     <button id="educationBtn" class="btn w-55 text-left">
+     <i class="fa-solid fa-graduation-cap"></i>
+     <span>Education</span>
+     </button>
+
+     <button id="personalBtn" class="btn w-55 text-left">
+     <i class="fa-solid fa-user"></i>
+     <span>Personal</span>
+     </button>
+
+     <button id="workBtn" class="btn w-55 text-left">
+     <i class="fa-solid fa-briefcase"></i>
+      <span>Work</span>
+     </button>
+
+      <button id="othersBtn" class="btn w-55 text-left">
+      <i class="fa-solid fa-layer-group"></i>
+       <span>Others</span>
+      </button>
+  </div>
+</div>
+
+<div class="profile">
+  <img src="https://i.pravatar.cc/100">
+
+    <div>
+    <h4>Jeri</h4>
+    <p>Premium User</p>
+    </div>
+</div>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+<div class="top-bar">
+<div class="search">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text"id="search"placeholder="Search memories...">
+</div>
+<button id="themeBtn">🌙 Theme</button>
+</div>
+
+<!-- STATS -->
+
+<div class="stats text-2xl font-bold items-center flex bg-[#111827] rounded-s-2xl">
+    <h2>Total Notes :<span id="noteCount" class="text-[#60a5fa]"> 0</span></h2>
+</div>
+
+<!-- ALL NOTES -->
+
+<div id="allSection">
+    <h2>All Notes</h2>
+   <div class="notes "id="allNotes"></div>
+</div>
+
+<!-- EDUCATION -->
+
+<div id="educationSection"style="display:none;">
+<h2>Education Notes</h2>
+<div class="notes"id="educationNotes"></div>
+</div>
+
+<!-- PERSONAL -->
+
+<div id="personalSection"style="display:none;">
+   <h2>Personal Notes</h2>
+   <div class="notes"id="personalNotes"></div>
+</div>
+
+<!-- WORK -->
+
+<div id="workSection"style="display:none;">
+   <h2>Work Notes</h2>
+   <div class="notes"id="workNotes"></div>
+</div>
+
+<!-- OTHERS -->
+
+<div id="othersSection"style="display:none;">
+  <h2>Other Notes</h2>
+  <div class="notes btn"id="otherNotes"></div>
+</div>
+
+</div>
+
+<!-- ADD BUTTON -->
+
+<button class="add-btn"id="openPopup"><i class="fa-solid fa-plus"></i></button>
+
+<!-- cards -->
+
+
+
+<!-- POPUP -->
+
+<div class="popup"id="popup">
+<div class="popup-content">
+<span class="close"id="closePopup">
+  &times;
+
+</span>
+<form id="form">
+<h2>Add Note</h2>
+
+<input type="text"id="title" placeholder="Note Title">
+<small class="msg" ></small>
+<select id="category">
+<option>Education</option>
+<option>Personal</option>
+<option>Work</option>
+<option>Others</option>
+</select>
+
+
+<textarea id="description"placeholder="Write your note...">
+</textarea>
+<small class="msg" ></small>
+<button id="saveNote">
+Save Note
+</button>
+
+<button id="cancelBtn">Cancel</button>
+</form>
+</div>
+</div>
+
+<script src="screen.js"></script>
+</body>
+</html>
